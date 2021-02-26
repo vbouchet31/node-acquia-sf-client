@@ -5,18 +5,18 @@ This module aims to be a wrapper around the ACSF API.
 ```
 const acsf = require('node-acquia-sf-client')
 
-let sfClient = new acsf.Client({
+const sfClient = new acsf.Client({
   subscription: 'mycustomername',
   env: 'dev',
   username: 'my.username',
   token: 'mysecrettokenfromaccountsettingsapikey'  
 })
 
-sites = await sfClient.api.sites.get({ limit: 10, page: 2 })
+const sites = await sfClient.api.sites.get({ limit: 10, page: 2 })
 
-site = await sfClient.api.site.get(111)
+const site = await sfClient.api.site.get(111)
 
-sites = await sfClient.helper.getAllSites()
+const sites = await sfClient.helper.getAllSites()
 ```
 
 The module is composed of api.* methods which are simple wrapper around the
