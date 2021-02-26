@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/vbouchet31/node-acquia-sf-client#readme",
   "dependencies": {
+    "batch-iterator": "^1.4.0",
     "node-fetch": "^2.6.1",
     "querystring": "^0.2.1"
   }
