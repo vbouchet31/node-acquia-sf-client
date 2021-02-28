@@ -35,6 +35,8 @@ const sites = await sfClient.helper.listAll()
 
 * Supported API endpoints
 
+The documentation of each endpoint is accessible at htts://www.<subscription>.acsitefactory.com/api/v1
+
 ** Sites
 GET `api/v1/sites/${site_id}`
 GET `api/v1/sites`
@@ -42,6 +44,12 @@ POST `api/v1/sites`
 DELETE `api/v1/sites/${site_id}`
 POST `api/v1/sites/${site_id}/duplicate`
 POST `api/v1/sites/${site_id}/cache-clear`
+
+** Backups
+GET `api/v1/sites/${site_id}/backups`
+GET `api/v1/sites/${site_id}/backups/${backup_id}/url`
+POST `api/v1/sites/${site_id}/backup`
+DELETE `api/v1/sites/${site_id}/backups/${backup_id}`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
