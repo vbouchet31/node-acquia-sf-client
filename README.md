@@ -36,8 +36,9 @@ const sites = await sfClient.helper.getAllSites()
 * Supported API endpoints
 
 ** Sites
-GET `api/v1/sites/${site_id}``
+GET `api/v1/sites/${site_id}`
 GET `api/v1/sites`
+POST `api/v1/sites`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
