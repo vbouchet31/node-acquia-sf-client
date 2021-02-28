@@ -41,6 +41,7 @@ GET `api/v1/sites`
 POST `api/v1/sites`
 DELETE `api/v1/sites/${site_id}`
 POST `api/v1/sites/${site_id}/duplicate`
+POST `api/v1/sites/${site_id}/cache-clear`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
