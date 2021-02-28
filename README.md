@@ -39,6 +39,7 @@ const sites = await sfClient.helper.listAll()
 GET `api/v1/sites/${site_id}`
 GET `api/v1/sites`
 POST `api/v1/sites`
+DELETE `api/v1/sites/${site_id}`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
