@@ -17,11 +17,11 @@ const sfClient = new acsf.Client({
   token: 'mysecrettokenfromaccountsettingsapikey'  
 })
 
-const sites = await sfClient.api.sites.get({ limit: 10, page: 2 })
+const sites = await sfClient.api.sites.list({ limit: 10, page: 2 })
 
-const site = await sfClient.api.site.get(111)
+const site = await sfClient.api.sites.get(111)
 
-const sites = await sfClient.helper.getAllSites()
+const sites = await sfClient.helper.listAll()
 ```
 
 * Usage
