@@ -63,3 +63,6 @@ client.tasks.list GET `api/v1/tasks`
 client.tasks.get GET `api/v1/tasks/${task_id}/logs`
 client.tasks.delete DELETE `api/v1/tasks/${task_id}`
 client.tasks.terminate PUT `api/v1/tasks/${task_id}`
+client.tasks.status GET `api/v1/wip/tasks/${task_id}/status`
+client.tasks.pause POST `api/v1/pause/${task_id}`
+client.tasks.pauseAll POST `api/v1/pause/${task_id}`
