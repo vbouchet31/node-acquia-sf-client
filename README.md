@@ -60,3 +60,6 @@ client.domains.remove POST `api/v1/domains/${site_id}/remove`
 
 ** Tasks
 client.tasks.list GET `api/v1/tasks`
+client.tasks.get GET `api/v1/tasks/${task_id}/logs`
+client.tasks.delete DELETE `api/v1/tasks/${task_id}`
+client.tasks.terminate PUT `api/v1/tasks/${task_id}`
