@@ -54,6 +54,9 @@ POST `api/v1/sites/${site_id}/restore`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
+GET `api/v1/domains/status/${domain_name}`
+POST `api/v1/domains/${site_id}/add`
+POST `api/v1/domains/${site_id}/remove`
 
 ** Tasks
 GET `api/v1/tasks`
