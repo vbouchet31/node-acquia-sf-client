@@ -38,25 +38,25 @@ const sites = await sfClient.helper.listAll()
 The documentation of each endpoint is accessible at htts://www.<subscription>.acsitefactory.com/api/v1
 
 ** Sites
-GET `api/v1/sites/${site_id}`
-GET `api/v1/sites`
-POST `api/v1/sites`
-DELETE `api/v1/sites/${site_id}`
-POST `api/v1/sites/${site_id}/duplicate`
-POST `api/v1/sites/${site_id}/cache-clear`
+client.sites.get GET `api/v1/sites/${site_id}`
+client.sites.list GET `api/v1/sites`
+client.sites.create POST `api/v1/sites`
+client.sites.delete DELETE `api/v1/sites/${site_id}`
+client.sites.duplicate POST `api/v1/sites/${site_id}/duplicate`
+client.sites.cacheClear POST `api/v1/sites/${site_id}/cache-clear`
 
 ** Backups
-GET `api/v1/sites/${site_id}/backups`
-GET `api/v1/sites/${site_id}/backups/${backup_id}/url`
-POST `api/v1/sites/${site_id}/backup`
-DELETE `api/v1/sites/${site_id}/backups/${backup_id}`
-POST `api/v1/sites/${site_id}/restore`
+client.backups.list GET `api/v1/sites/${site_id}/backups`
+client.backups.get GET `api/v1/sites/${site_id}/backups/${backup_id}/url`
+client.backups.create POST `api/v1/sites/${site_id}/backup`
+client.backups.delete DELETE `api/v1/sites/${site_id}/backups/${backup_id}`
+client.backups.restore POST `api/v1/sites/${site_id}/restore`
 
 ** Domains
-GET `api/v1/domains/${node_id}`
-GET `api/v1/domains/status/${domain_name}`
-POST `api/v1/domains/${site_id}/add`
-POST `api/v1/domains/${site_id}/remove`
+client.domains.get GET `api/v1/domains/${node_id}`
+client.domains.status GET `api/v1/domains/status/${domain_name}`
+client.domains.add POST `api/v1/domains/${site_id}/add`
+client.domains.remove POST `api/v1/domains/${site_id}/remove`
 
 ** Tasks
-GET `api/v1/tasks`
+client.tasks.list GET `api/v1/tasks`
