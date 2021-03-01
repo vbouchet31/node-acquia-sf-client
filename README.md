@@ -50,6 +50,7 @@ GET `api/v1/sites/${site_id}/backups`
 GET `api/v1/sites/${site_id}/backups/${backup_id}/url`
 POST `api/v1/sites/${site_id}/backup`
 DELETE `api/v1/sites/${site_id}/backups/${backup_id}`
+POST `api/v1/sites/${site_id}/restore`
 
 ** Domains
 GET `api/v1/domains/${node_id}`
