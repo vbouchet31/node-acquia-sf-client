@@ -69,11 +69,14 @@ The documentation of each endpoint is accessible at `htts://www.<subscription>.a
 
 # Helpers
 
-Few helper methods have been implemented.
+Few helper methods have been implemented. Be cautious in using these helpers,
+there is no limit in the number of API calls they may issue.
 
 ## Sites
 - client.helper.sites.listAll
 
 ## Tasks
-- client.helper.tasks.getAllTasksSinceTask
-- client.helper.tasks.getChildTasks
+- client.helper.tasks.getAllTasksSinceTask(task_id)
+- client.helper.tasks.getChildTasks(task_id)
+- client.helper.tasks.getTask(task_id)
+- client.helper.tasks.getParentTasks(task_id)
