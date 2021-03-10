@@ -32,6 +32,7 @@ Client variables:
  - token
  - limit (number of items per page - default: 100)
  - batch_size (maximum number of concurrent API calls - default: 5)
+ - max_pages (maximum number of pages which will be fetched - default: 100)
 
 # Supported API endpoints
 
@@ -76,7 +77,15 @@ there is no limit in the number of API calls they may issue.
 - client.helper.sites.listAll
 
 ## Tasks
-- client.helper.tasks.getAllTasksSinceTask(task_id)
+- client.helper.tasks.getAllTasksUntilAttr(attributeName, value, condition)
+ex: getAllTasksUntilAttr(id, 1231, '==') to get all tasks more recent than task 1231.
 - client.helper.tasks.getChildTasks(task_id)
 - client.helper.tasks.getTask(task_id)
 - client.helper.tasks.getParentTasks(task_id)
+
+# Limitation
+
+Because of some API limitation, some helper functions around tasks may not work
+for old tasks. Given the maximum number of items per page is enforced to 100 at
+API side and because some helper function are actually looping over pages, the
+`max_pages` variable may stop the loops before the requested tasks are found.
