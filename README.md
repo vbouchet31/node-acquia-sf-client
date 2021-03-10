@@ -77,8 +77,9 @@ there is no limit in the number of API calls they may issue.
 - client.helper.sites.listAll
 
 ## Tasks
-- client.helper.tasks.getAllTasksUntilAttr(attributeName, value, condition)
-ex: getAllTasksUntilAttr(id, 1231, '==') to get all tasks more recent than task 1231.
+- client.helper.tasks.getAllTasksUntilAttr(attributeName, value, condition, exclusive)
+ex: getAllTasksUntilAttr(id, 1231, '==', true) to get all tasks more recent than task 1231.
+ex: getAllTasksUntilAttr(id, 1231, '==', false) to get all tasks more recent than task 1231, 1231 included.
 - client.helper.tasks.getChildTasks(task_id)
 - client.helper.tasks.getTask(task_id)
 - client.helper.tasks.getParentTasks(task_id)
