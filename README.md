@@ -77,9 +77,8 @@ there is no limit in the number of API calls they may issue.
 - client.helper.sites.listAll
 
 ## Tasks
-- client.helper.tasks.getAllTasksUntilAttr(attributeName, value, condition, exclusive)
-ex: getAllTasksUntilAttr(id, 1231, '==', true) to get all tasks more recent than task 1231.
-ex: getAllTasksUntilAttr(id, 1231, '==', false) to get all tasks more recent than task 1231, 1231 included.
+- client.helper.tasks.getAllTasksSince(attributeName, value, condition)
+ex: getAllTasksUntilAttr(id, 1231, '>=') to get all tasks which the id is greater than 1231.
 - client.helper.tasks.getChildTasks(task_id)
 - client.helper.tasks.getTask(task_id)
 - client.helper.tasks.getParentTasks(task_id)
@@ -87,6 +86,10 @@ ex: getAllTasksUntilAttr(id, 1231, '==', false) to get all tasks more recent tha
 # Limitation
 
 Because of some API limitation, some helper functions around tasks may not work
-for old tasks. Given the maximum number of items per page is enforced to 100 at
-API side and because some helper function are actually looping over pages, the
-`max_pages` variable may stop the loops before the requested tasks are found.
+for old tasks. Some helper functions are looping over pages to find requested
+tasks. The `max_pages` client argument is to limit the number of fetched pages
+to avoid infinite loop. The `limit` client argument determine the number of
+items per page to fetch. A `limit` to 100 and a reasonable `max_pages` value
+should cover most of the cases.
+For example, `max_pages` to 10 and `limit` to 100 would fetch about 1000 items
+(tasks or sites).
