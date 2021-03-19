@@ -27,7 +27,7 @@ const sites = await sfClient.helper.listAll()
 
 Client variables:
  - subscription
- - env (empty if production/live)
+ - env (empty, prod and live can be used for production environment)
  - username
  - token
  - limit (number of items per page - default: 100)
